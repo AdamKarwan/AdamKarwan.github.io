@@ -34,14 +34,14 @@ export function Experience({
             <em className="text-sm text-gray-400">{timeframe}</em>
           </div>
         </div>
-        <p className="mt-2">{description}</p>
+        <p className="mt-2 font-semibold">{description}</p>
       </FadeInOnScroll>
       {achievements && (
-        <ul className="mt-2 list-inside list-disc">
+        <ul className="mt-2 list-disc">
           {achievements.map((achievement) => (
-            <FadeInOnScroll key={achievement}>
-              <li>{achievement}</li>
-            </FadeInOnScroll>
+            <li className="mb-2" key={achievement}>
+              <FadeInOnScroll>{achievement}</FadeInOnScroll>
+            </li>
           ))}
         </ul>
       )}
