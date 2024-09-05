@@ -18,7 +18,7 @@ const App = () => {
     workExperienceRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-800 to-gray-950 text-white">
+    <div className="min-h-screen bg-gradient-to-r from-gray-800 to-gray-950 text-white">
       <main className="flex flex-col items-center justify-center gap-8 px-4">
         <div className="flex min-h-screen flex-col items-center justify-center gap-3">
           <div className="flex flex-grow items-center">

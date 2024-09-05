@@ -96,12 +96,16 @@ const experiences: Experience[] = [
 export function Experiences() {
   return (
     <div>
-      <h2 className="mb-4 text-center text-4xl font-semibold text-white">
+      <h2 className="mb-6 text-center text-4xl font-semibold text-white">
         Work Experience
       </h2>
-      {experiences.map((experience) => (
-        <Experience key={experience.id} {...experience} />
-      ))}
+      <ul>
+        {experiences.map((experience) => (
+          <li key={experience.id} className="mb-8">
+            <Experience {...experience} />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

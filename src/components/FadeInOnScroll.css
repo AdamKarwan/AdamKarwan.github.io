@@ -1,0 +1,12 @@
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateX(100px); /* Adjust the initial position as needed */
+  transition:
+    opacity 1s ease-out,
+    transform 1s ease-out;
+}
+
+.fade-in-on-scroll.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
