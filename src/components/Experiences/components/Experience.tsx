@@ -1,5 +1,5 @@
-import { Carousel } from './Carousel';
-import { FadeInOnScroll } from './FadeInOnScroll';
+import { Carousel } from '../../Carousel/Carousel';
+import { FadeInOnScroll } from '../../FadeInOnScroll/FadeInOnScroll';
 
 export type Experience = {
   id: string;

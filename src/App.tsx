@@ -1,7 +1,7 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faArrowDown, faDownload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Experiences } from 'components/Experiences';
+import { Experiences } from 'components/Experiences/Experiences';
 import { useEffect, useRef, useState } from 'react';
 
 const App = () => {
