@@ -101,7 +101,7 @@ export function Experiences() {
       </h2>
       <ul>
         {experiences.map((experience) => (
-          <li key={experience.id} className="mb-8">
+          <li key={experience.id} className="mb-24">
             <Experience {...experience} />
           </li>
         ))}
