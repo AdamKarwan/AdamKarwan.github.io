@@ -6,26 +6,29 @@ interface CarouselProps {
 }
 
 export const Carousel: React.FC<CarouselProps> = ({ tags }) => {
-  const trackRef = useRef<HTMLDivElement>(null);
+  const trackRef1 = useRef<HTMLDivElement>(null);
+  const trackRef2 = useRef<HTMLDivElement>(null);
   const [duration, setDuration] = useState(10); // Default duration
 
   useEffect(() => {
-    if (trackRef.current) {
-      // we calculate the duration of the animation so that they scroll at the same speed regardless of how many there are
-      const trackWidth = trackRef.current.scrollWidth;
-      const totalWidth = trackWidth / 2; // Since we duplicate the tags
-      const speed = 100; // Pixels per second
+    if (trackRef1.current && trackRef2.current) {
+      // Calculate the duration of the animation so that they scroll at the same speed regardless of how many there are
+      const trackWidth = trackRef1.current.scrollWidth;
+      const totalWidth = trackWidth; // Since we duplicate the tags
+      const speed = 50; // Pixels per second
       const newDuration = totalWidth / speed;
       setDuration(newDuration);
     }
   }, [tags]);
+
   return (
-    <div className="position-relative max-w-full overflow-hidden whitespace-nowrap">
+    <div className="relative max-w-full whitespace-nowrap">
       <div
-        ref={trackRef}
-        className="inline-block animate-[scroll_linear_infinite]"
+        ref={trackRef1}
+        className="absolute left-0 top-0 inline-block"
         style={{
-          animationDuration: `${duration}s`,
+          animation: `scroll ${duration}s linear infinite`,
+          transform: 'translateZ(0)',
         }}
       >
         {tags.map((tag, index) => (
@@ -36,6 +39,16 @@ export const Carousel: React.FC<CarouselProps> = ({ tags }) => {
             {tag}
           </span>
         ))}
+      </div>
+      <div
+        ref={trackRef2}
+        className="absolute left-0 top-0 inline-block"
+        style={{
+          animation: `scroll ${duration}s linear infinite`,
+          transform: 'translateZ(0)',
+          animationDelay: `-${duration / 2}s`,
+        }}
+      >
         {tags.map((tag, index) => (
           <span
             key={index + tags.length}
