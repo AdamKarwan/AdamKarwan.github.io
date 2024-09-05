@@ -20,7 +20,6 @@ module.exports = {
   plugins: [
     'react',
     'react-hooks',
-    'prettier',
     '@typescript-eslint',
     'react-refresh',
     'import',
@@ -31,10 +30,11 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
-    'plugin:prettier/recommended',
     'eslint-config-prettier',
   ],
-  rules: {},
+  rules: {
+    'react/no-unescaped-entities': 'off', // Ignore the no unescaped characters rule
+  },
   ignorePatterns: ['dist', 'node_modules', '.eslintrc.cjs', 'eslint.config.js'],
   globals: {
     Edit: 'writable',
