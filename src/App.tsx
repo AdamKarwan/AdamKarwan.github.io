@@ -24,7 +24,7 @@ const App = () => {
           <div className="flex flex-grow items-center">
             <section
               id="about-me"
-              className="max-w-2xl rounded-lg bg-white bg-opacity-10 p-6 shadow-lg backdrop-blur-md"
+              className="max-w-[min(90vw,42rem)] rounded-lg bg-white bg-opacity-10 p-6 shadow-lg backdrop-blur-md"
             >
               <h1 className="mb-4 text-center text-4xl font-semibold">
                 Hi! I'm Adam Karwan
@@ -89,9 +89,26 @@ const App = () => {
         <section
           id="work-experience"
           ref={workExperienceRef}
-          className="max-w-2xl rounded-lg p-6"
+          className="max-w-[min(90vw,42rem)] overflow-hidden rounded-lg p-6"
         >
           <Experiences />
+        </section>
+        <section
+          id="contact-me"
+          className="mb-24 max-w-[min(90vw,42rem)] overflow-hidden rounded-lg bg-white bg-opacity-10 p-6 shadow-lg backdrop-blur-md"
+        >
+          <h2 className="mb-4 text-center text-3xl font-semibold text-white">
+            Contact Me
+          </h2>
+          <p className="text-center text-lg">
+            Feel free to reach out to me at:{' '}
+            <a
+              href="mailto:akarwan@live.com"
+              className="text-cyan-600 hover:text-cyan-700"
+            >
+              akarwan@live.com
+            </a>
+          </p>
         </section>
       </main>
     </div>

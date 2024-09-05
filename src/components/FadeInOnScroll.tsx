@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './FadeInOnScroll.css'; // Import the CSS file
 
-function FadeInOnScroll({ children }: { children: React.ReactNode }) {
+export function FadeInOnScroll({ children }: { children: React.ReactNode }) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -40,5 +40,3 @@ function FadeInOnScroll({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
-
-export default FadeInOnScroll;

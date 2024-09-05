@@ -1,9 +1,9 @@
-import FadeInOnScroll from './FadeInOnScroll';
+import { Carousel } from './Carousel';
+import { FadeInOnScroll } from './FadeInOnScroll';
 
 export type Experience = {
   id: string;
   title: string;
-  logo?: string;
   company: string;
   timeframe: string;
   description: string;
@@ -18,7 +18,6 @@ export type ExperienceProps = {
 export function Experience({
   className,
   title,
-  logo,
   company,
   timeframe,
   description,
@@ -29,7 +28,6 @@ export function Experience({
     <div className={className}>
       <FadeInOnScroll>
         <div className="flex items-center">
-          {logo && <img className="mr-4 h-12 w-12" src={logo} alt={company} />}
           <div>
             <h3 className="text-2xl font-semibold">{title}</h3>
             <p className="text-sm text-gray-400">{company}</p>
@@ -50,12 +48,8 @@ export function Experience({
       {skills && (
         <FadeInOnScroll>
           <div className="mt-2">
-            <p className="font-semibold">Skills:</p>
-            <ul className="list-inside list-disc">
-              {skills.map((skill, i) => (
-                <li key={i}>{skill}</li>
-              ))}
-            </ul>
+            <p className="mb-2 font-semibold">Skills:</p>
+            <Carousel tags={skills} />
           </div>
         </FadeInOnScroll>
       )}
