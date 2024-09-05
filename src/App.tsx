@@ -1,5 +1,5 @@
+import logo from 'assets/images/logo.svg';
 import { useState } from 'react';
-import logo from './assets/images/logo.svg';
 
 const App = () => {
   const [count, setCount] = useState(0);
