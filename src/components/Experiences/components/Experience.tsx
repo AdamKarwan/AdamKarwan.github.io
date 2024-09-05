@@ -46,12 +46,12 @@ export function Experience({
         </ul>
       )}
       {skills && (
-        <FadeInOnScroll>
-          <div className="mt-2">
+        <div className="mt-2">
+          <FadeInOnScroll>
             <p className="mb-2 font-semibold">Skills:</p>
-            <Carousel tags={skills} />
-          </div>
-        </FadeInOnScroll>
+          </FadeInOnScroll>
+          <Carousel tags={skills} />
+        </div>
       )}
     </div>
   );
