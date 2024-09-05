@@ -2,6 +2,7 @@ import { Experience } from './Experience';
 
 const experiences: Experience[] = [
   {
+    id: 'toog',
     title: 'Full-Stack Developer',
     company: 'Toog Software, Australia',
     timeframe: 'September 2022 - Present',
@@ -42,6 +43,7 @@ const experiences: Experience[] = [
     ],
   },
   {
+    id: 'cabmaster-dev',
     title: 'Software Developer',
     company: 'CabMaster Software, Bayswater, VIC',
     timeframe: 'April 2019 - September 2022',
@@ -67,6 +69,7 @@ const experiences: Experience[] = [
     ],
   },
   {
+    id: 'cabmaster-support',
     title: 'Technical Support',
     company: 'CabMaster Software, Bayswater, VIC',
     timeframe: 'April 2018 - April 2021',
@@ -93,8 +96,11 @@ const experiences: Experience[] = [
 export function Experiences() {
   return (
     <div>
-      {experiences.map((experience, i) => (
-        <Experience key={i} {...experience} />
+      <h2 className="mb-4 text-center text-4xl font-semibold text-white">
+        Work Experience
+      </h2>
+      {experiences.map((experience) => (
+        <Experience key={experience.id} {...experience} />
       ))}
     </div>
   );

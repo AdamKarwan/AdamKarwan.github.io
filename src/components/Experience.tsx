@@ -1,4 +1,5 @@
 export type Experience = {
+  id: string;
   title: string;
   logo?: string;
   company: string;
