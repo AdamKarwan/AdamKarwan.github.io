@@ -86,13 +86,15 @@ const App = () => {
             <FontAwesomeIcon icon={faArrowDown} size="2x" />
           </button>
         </div>
-        <section
-          id="work-experience"
-          ref={workExperienceRef}
-          className="max-w-[min(90vw,42rem)] overflow-hidden rounded-lg p-6"
-        >
-          <Experiences />
-        </section>
+        <div className="flex w-screen justify-center bg-gray-800">
+          <section
+            id="work-experience"
+            ref={workExperienceRef}
+            className="max-w-[min(90vw,42rem)] overflow-hidden rounded-lg p-6"
+          >
+            <Experiences />
+          </section>
+        </div>
         <section
           id="contact-me"
           className="mb-24 max-w-[min(90vw,42rem)] overflow-hidden rounded-lg bg-white bg-opacity-10 p-6 shadow-lg backdrop-blur-md"
