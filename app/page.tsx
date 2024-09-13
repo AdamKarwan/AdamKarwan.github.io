@@ -64,7 +64,7 @@ export default function Home() {
           </div>
           <ScrollToExperienceButton />
         </div>
-        <div className="flex w-screen justify-center bg-gray-800">
+        <div className="flex w-full justify-center bg-gray-800">
           <section
             id="work-experience"
             className="max-w-[min(90vw,42rem)] overflow-hidden rounded-lg p-6"
