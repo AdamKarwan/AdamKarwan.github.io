@@ -1,11 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
-import './Carousel.css'; // Import the CSS file
+"use client";
+import React, { useEffect, useRef, useState } from "react";
+import "./Carousel.css"; // Import the CSS file
 
 interface CarouselProps {
   tags: string[];
 }
 
-export const Carousel: React.FC<CarouselProps> = ({ tags }) => {
+const Carousel: React.FC<CarouselProps> = ({ tags }) => {
   const trackRef1 = useRef<HTMLDivElement>(null);
   const trackRef2 = useRef<HTMLDivElement>(null);
   const [duration, setDuration] = useState(10); // Default duration
@@ -28,7 +29,7 @@ export const Carousel: React.FC<CarouselProps> = ({ tags }) => {
         className="absolute left-0 top-0 inline-block"
         style={{
           animation: `scroll ${duration}s linear infinite`,
-          transform: 'translateZ(0)',
+          transform: "translateZ(0)",
         }}
       >
         {tags.map((tag, index) => (
@@ -45,7 +46,7 @@ export const Carousel: React.FC<CarouselProps> = ({ tags }) => {
         className="absolute left-0 top-0 inline-block"
         style={{
           animation: `scroll ${duration}s linear infinite`,
-          transform: 'translateZ(0)',
+          transform: "translateZ(0)",
           animationDelay: `-${duration / 2}s`,
         }}
       >
@@ -61,3 +62,4 @@ export const Carousel: React.FC<CarouselProps> = ({ tags }) => {
     </div>
   );
 };
+export default Carousel;

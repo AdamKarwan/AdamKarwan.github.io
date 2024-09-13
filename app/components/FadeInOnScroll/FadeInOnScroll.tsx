@@ -1,7 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
-import './FadeInOnScroll.css'; // Import the CSS file
+"use client";
+import React, { useEffect, useRef, useState } from "react";
+import "./FadeInOnScroll.css"; // Import the CSS file
 
-export function FadeInOnScroll({ children }: { children: React.ReactNode }) {
+export default function FadeInOnScroll({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -17,7 +22,7 @@ export function FadeInOnScroll({ children }: { children: React.ReactNode }) {
       },
       {
         threshold: 0.1,
-      },
+      }
     );
 
     if (currentRef) {
@@ -34,7 +39,7 @@ export function FadeInOnScroll({ children }: { children: React.ReactNode }) {
   return (
     <div
       ref={ref}
-      className={`fade-in-on-scroll ${isVisible ? 'visible' : ''}`}
+      className={`fade-in-on-scroll ${isVisible ? "visible" : ""}`}
     >
       {children}
     </div>

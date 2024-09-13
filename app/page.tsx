@@ -1,22 +1,10 @@
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faArrowDown, faDownload } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Experiences } from 'components/Experiences/Experiences';
-import { useEffect, useRef, useState } from 'react';
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Experiences from "./components/Experiences/Experiences";
+import ScrollToExperienceButton from "./components/ScrollToExperienceButton.tsx/ScrollToExperienceButton";
 
-const App = () => {
-  const [isAtTop, setIsAtTop] = useState(true);
-  const workExperienceRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsAtTop(window.scrollY < 100);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-  const scrollToExperience = () => {
-    workExperienceRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-r from-gray-800 to-gray-950 text-white">
       <main className="flex flex-col items-center justify-center gap-8 px-4">
@@ -74,22 +62,11 @@ const App = () => {
               </div>
             </section>
           </div>
-          <button
-            onClick={scrollToExperience}
-            className={`mb-16 text-cyan-600 transition-all duration-300 motion-safe:animate-bounce ${
-              isAtTop ? 'visible opacity-100' : 'invisible opacity-0'
-            }`}
-            aria-hidden={!isAtTop}
-            type="button"
-            title='Scroll to "Work Experience"'
-          >
-            <FontAwesomeIcon icon={faArrowDown} size="2x" />
-          </button>
+          <ScrollToExperienceButton />
         </div>
         <div className="flex w-screen justify-center bg-gray-800">
           <section
             id="work-experience"
-            ref={workExperienceRef}
             className="max-w-[min(90vw,42rem)] overflow-hidden rounded-lg p-6"
           >
             <Experiences />
@@ -103,7 +80,7 @@ const App = () => {
             Contact Me
           </h2>
           <p className="text-center text-lg">
-            Feel free to reach out to me at:{' '}
+            Feel free to reach out to me at:{" "}
             <a
               href="mailto:akarwan@live.com"
               className="text-cyan-600 hover:text-cyan-700"
@@ -115,6 +92,4 @@ const App = () => {
       </main>
     </div>
   );
-};
-
-export default App;
+}

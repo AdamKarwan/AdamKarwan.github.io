@@ -1,7 +1,7 @@
-import { Carousel } from '../../Carousel/Carousel';
-import { FadeInOnScroll } from '../../FadeInOnScroll/FadeInOnScroll';
+import Carousel from "../../Carousel/Carousel";
+import FadeInOnScroll from "../../FadeInOnScroll/FadeInOnScroll";
 
-export type Experience = {
+export type ExperienceType = {
   id: string;
   title: string;
   company: string;
@@ -13,9 +13,9 @@ export type Experience = {
 
 export type ExperienceProps = {
   className?: string;
-} & Experience;
+} & ExperienceType;
 
-export function Experience({
+export default function Experience({
   className,
   title,
   company,
