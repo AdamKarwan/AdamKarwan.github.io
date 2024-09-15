@@ -27,7 +27,7 @@ const ScrollToExperienceButton = () => {
       type="button"
       title='Scroll to "Work Experience"'
     >
-      <FontAwesomeIcon icon={faArrowDown} size="2x" />
+      <FontAwesomeIcon className="h-8" icon={faArrowDown} size="2x" />
     </button>
   );
 };

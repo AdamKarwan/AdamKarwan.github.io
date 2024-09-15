@@ -2,6 +2,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Experiences from "./components/Experiences/Experiences";
+import ParticlesBackground from "./components/ParticlesBackground/ParticlesBackground";
 import ScrollToExperienceButton from "./components/ScrollToExperienceButton.tsx/ScrollToExperienceButton";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-r from-gray-800 to-gray-950 text-white">
       <main className="flex flex-col items-center justify-center gap-8 px-4">
         <div className="flex min-h-screen flex-col items-center justify-center gap-3">
+          <ParticlesBackground />
           <div className="flex flex-grow items-center">
             <section
               id="about-me"
@@ -35,7 +37,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="text-white transition-all hover:scale-110 hover:text-gray-400"
                 >
-                  <FontAwesomeIcon icon={faGithub} size="2x" />
+                  <FontAwesomeIcon className="h-8" icon={faGithub} size="2x" />
                 </a>
                 <a
                   title="LinkedIn"
@@ -44,7 +46,11 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="text-white transition-all hover:scale-110 hover:text-gray-400"
                 >
-                  <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                  <FontAwesomeIcon
+                    className="h-8"
+                    icon={faLinkedin}
+                    size="2x"
+                  />
                 </a>
                 <a
                   title="Download Resume"
@@ -56,7 +62,7 @@ export default function Home() {
                   My Resume
                   <FontAwesomeIcon
                     icon={faDownload}
-                    className="transition-all group-hover:scale-110"
+                    className="transition-all group-hover:scale-110 h-4"
                   />
                 </a>
               </div>
