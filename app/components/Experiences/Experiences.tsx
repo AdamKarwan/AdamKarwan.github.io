@@ -3,7 +3,7 @@ import Experience, { ExperienceType } from "./components/Experience";
 const experiences: ExperienceType[] = [
   {
     id: "toog",
-    title: "Full-Stack Engineer",
+    title: "Full-Stack Software Engineer",
     company: "Toog Software, Australia",
     timeframe: "September 2022 - Present",
     description:
