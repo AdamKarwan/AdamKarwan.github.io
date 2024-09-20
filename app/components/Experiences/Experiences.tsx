@@ -3,18 +3,18 @@ import Experience, { ExperienceType } from "./components/Experience";
 const experiences: ExperienceType[] = [
   {
     id: "toog",
-    title: "Full-Stack Developer",
+    title: "Full-Stack Engineer",
     company: "Toog Software, Australia",
     timeframe: "September 2022 - Present",
     description:
-      "Lead software development and design for a complex enterprise ERP system.",
+      "Led the development of a CRM/Job Management and Quoting system",
     achievements: [
-      "Developed and maintained both frontend and backend systems of an ERP and job management/quoting application from inception to deployment.",
-      "Utilized React to build responsive and user-friendly interfaces.",
-      "Leveraged AWS Amplify for backend development, ensuring scalable and secure application infrastructure.",
+      "Developed and maintained frontend and backend systems, utilizing AWS, React, and modern web technologies.",
+      "Conducted code reviews, implemented automated testing, and enforced best practices.",
       "Collaborated with cross-functional teams to deliver scalable web applications.",
-      "Ensured code quality and performance through rigorous testing and code reviews.",
-      "Implemented RESTful APIs and integrated third-party services to enhance application functionality.",
+      "Built RESTful APIs and integrated third-party services.",
+      "Wrote Python scripts for data backfilling and handling webhooks.",
+      "Developed .NET applications and libraries for imports and third-party integrations.",
     ],
     skills: [
       "React.js",
@@ -48,12 +48,14 @@ const experiences: ExperienceType[] = [
     company: "CabMaster Software, Bayswater, VIC",
     timeframe: "April 2019 - September 2022",
     description:
-      "Developed and maintained industry-standard software solutions in collaboration with clients.",
+      "Developed and maintained industry-standard software solutions for the cabinet-making industry.",
     achievements: [
-      "Developed and maintained CabMaster, a widely-used cabinet making software.",
-      "Fixed bugs and implemented new features to enhance software functionality and user experience.",
-      "Authored comprehensive documentation to support users and developers.",
-      "Developed and maintained drivers used in hundreds of CNC machines across Australia, enabling automation in the manufacturing process.",
+      "Maintained and enhanced CabMaster, a widely-used cabinet-making software.",
+      "Fixed bugs and implemented new features to improve functionality and user experience.",
+      "Authored comprehensive documentation for users and developers.",
+      "Developed and maintained drivers for CAD/CAM software, enabling automation in hundreds of CNC machines across Australia.",
+      "Created a Python application to visualize and create tool profiles, aiding the development process.",
+      "Developed a .NET application to combine label files from multiple jobs, reducing paper waste when printing",
     ],
     skills: [
       "Proprietary Software",
@@ -66,6 +68,9 @@ const experiences: ExperienceType[] = [
       "GitHub",
       "Zoho",
       "G-Code",
+      "C#",
+      ".NET",
+      "Python",
     ],
   },
   {
@@ -73,14 +78,15 @@ const experiences: ExperienceType[] = [
     title: "Technical Support",
     company: "CabMaster Software, Bayswater, VIC",
     timeframe: "April 2018 - April 2021",
-    description: "Provide advanced technical support and customer service.",
+    description:
+      "Provided advanced technical support and customer service for software users.",
     achievements: [
-      "Provided technical support to clients, applying advanced troubleshooting techniques to resolve issues quickly and efficiently.",
-      "Acted as a liaison between customers and the development team to provide feedback and implement solutions that addressed both technical and user concerns.",
-      "Authored clear, customer-friendly documentation to assist clients with common issues, improving overall customer satisfaction.",
-      "Maintained a 99%+ positive feedback rating from customers who received my support.",
-      "Provided in-person training to new customers on how to use the software and integrate it with their business.",
-      "Configured software and automation solutions to integrate the software with customers’ CNC machines.",
+      "Applied advanced troubleshooting techniques to resolve client issues quickly and efficiently",
+      "Acted as a liaison between customers and the development team, ensuring both technical and user concerns were addressed",
+      "Authored clear, user-friendly documentation to assist clients, improving customer satisfaction",
+      "Maintained a 99%+ positive feedback rating from customers",
+      "Delivered in-person training to new customers on software usage and business integration",
+      "Configured software and automation solutions for seamless integration with customers’ CNC machines",
     ],
     skills: [
       "Technical Support",
